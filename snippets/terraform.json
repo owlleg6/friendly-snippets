@@ -2116,6 +2116,18 @@
       "}"
     ]
   },
+  "azurerm_databricks_workspace": {
+    "prefix": "tf-azurerm_databricks_workspace",
+    "description": "Defines azurerm_databricks_workspace resource",
+    "body": [
+      "resource \"azurerm_databricks_workspace\" \"${MyResource}\" {",
+      "   name = \"example-name\"",
+      "   resource_group_name = \"\\${azurerm_resource_group.test.name}\"",
+      "   location = \"West US\"",
+      "   sku = \"standard\"",
+      "}"
+    ]
+  },
   "azurerm_dns_a_record": {
     "prefix": "tf-azurerm_dns_a_record",
     "description": "Defines azurerm_dns_a_record resource",
